@@ -1,0 +1,22 @@
+{
+  "name": "livescratch-site",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "http-server -p 4001"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/waakul/livescratch.git"
+  },
+  "author": "Waakul",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/waakul/livescratch/issues"
+  },
+  "homepage": "https://github.com/waakul/livescratch#readme",
+  "description": "",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}
