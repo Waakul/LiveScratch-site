@@ -292,6 +292,8 @@ footer {
     flex-direction: row;
     gap: 5px;
     align-items: center;
+    text-decoration: none;
+    color: #fff;
 }
 
 #quick-links {
