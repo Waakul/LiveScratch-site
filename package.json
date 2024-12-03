@@ -3,20 +3,24 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "start": "http-server -p 4001"
+    "start": "pm2 start server.js --name LiveScratch-Site",
+    "stop": "pm2 stop LiveScratch-Site",
+    "delete": "pm2 delete LiveScratch-Site",
+    "reload": "pm2 restart LiveScratch-Site"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/waakul/livescratch.git"
+    "url": "git+https://github.com/waakul/livescratch-site.git"
   },
   "author": "Waakul",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/waakul/livescratch/issues"
+    "url": "https://github.com/waakul/livescratch-site/issues"
   },
-  "homepage": "https://github.com/waakul/livescratch#readme",
+  "homepage": "https://github.com/waakul/livescratch-site#readme",
   "description": "",
   "dependencies": {
-    "http-server": "^14.1.1"
+    "express": "^4.21.1",
+    "pm2": "^5.4.3"
   }
 }
