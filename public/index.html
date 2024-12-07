@@ -15,7 +15,7 @@
             <div id="header-left">
                 <img id="logo" src="/assets/logo.png"/>
                 <span class="nunito-bold" id="livescratch">LiveScratch</span>
-                <span id="version">v0.1.0</span>
+                <span id="version"><span id="version-text"></span></span>
             </div>
             <div id="header-right">
                 <ul>
@@ -81,7 +81,7 @@
             <div style="display: flex; flex-direction: row; align-items: center; gap: 5px;">
                 <img id="logo" src="/assets/logo.png"/>
                 <span class="nunito-bold" style="font-size: 25px;">LiveScratch</span>
-                <span style="opacity: 0.8;">Currently v0.1.0<span>
+                <span style="opacity: 0.8;">Currently <span id="version-text"></span><span>
             </div>
             <div id="quick-links">
                 <a href="https://github.com/Waakul/LiveScratch-site" class="quick-link">
@@ -107,5 +107,29 @@
             </div>
             <span style="font-size: 20px; align-self: center;">Please support me at: <a href="https://ko-fi.com/waakul" style="color: #eaffe4;">https://ko-fi.com/waakul</a></span>
         </footer>
+        <script>
+            const origin = window.location.origin;
+            window.onload = function() {
+                fetchVersion();
+            }; 
+
+            function fetchVersion() {
+                fetch(`${origin}/getVersion`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok (fetchVersion)');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    document.querySelectorAll('#version-text').forEach(element => {
+                        element.innerText = data.version;
+                    });
+                })
+                .catch(error => {
+                    console.error('There has been a problem with your fetch operation (fetchVersion):', error);
+                });
+            }
+        </script>
     </body>
 </html>

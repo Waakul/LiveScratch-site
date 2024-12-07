@@ -2,6 +2,7 @@
   "name": "livescratch-site",
   "version": "1.0.0",
   "main": "server.js",
+  "type": "module",
   "scripts": {
     "start": "pm2 start server.js --name LiveScratch-Site",
     "stop": "pm2 stop LiveScratch-Site",
@@ -21,6 +22,7 @@
   "description": "",
   "dependencies": {
     "express": "^4.21.1",
-    "pm2": "^5.4.3"
+    "pm2": "^5.4.3",
+    "puppeteer": "^23.10.1"
   }
 }
