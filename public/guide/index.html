@@ -3,8 +3,8 @@
     <head>
         <title>LiveScratch | Live Scratch Collaborations</title>
         <link rel="icon" type="image/x-icon" href="/assets/logo.ico"/>
-        <link rel="preload" href="/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <link rel="stylesheet" href="/style.css"/>
+        <link rel="preload" href="/guide/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="stylesheet" href="/guide/style.css"/>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
@@ -17,10 +17,13 @@
                     <img id="logo" src="/assets/logo.png"/>
                     <span class="nunito-bold" id="livescratch">LiveScratch</span>
                 </a>
-                <span id="version"><a id="version-text" href="https://github.com/Waakul/LiveScratch/releases/latest"></a></span>
+                <span id="version"><span id="version-text"></span></span>
             </div>
             <div id="header-right">
                 <ul>
+                    <li><a href="/guide" class="nunito-bold">
+                        Guide
+                    </a></li>
                     <li><a class="nunito-bold tooltip" id="coming-soon">
                         Hub
                         <span class="tooltiptext tooltip-left">Coming Soon!</span>
@@ -29,56 +32,34 @@
             </div>
         </header></div>
         <section id="section-top">
-            <img src="/assets/elements/flyingPlane.svg" alt="" style="position: absolute; left: 0; top: 5%; filter: blur(1.5px); height: 208px;"/>
+            <img src="/assets/elements/flyingPlane.svg" alt="" style="position: absolute; left: -10px; top: 17%; filter: blur(1.5px); height: 208px;"/>
             <img src="/assets/elements/star.svg" alt="" id="section-top-star" style="
                 position: absolute;
-                left: 35%;
-                top: 70%;
+                right: 25%;
+                top: 50%;
                 filter: blur(1.5px);
-                height: 83px;"
+                height: 83px;
+                width: 83px;"
             />
-            <div id="section-top-left" style="z-index: 10;">
-                <span style="font-size: 60px; line-height: 60px;" class="nunito-bold">
-                    It's Out For BETA!
-                </span>
-                <span style="font-size: 45px; line-height: 55px;" class="nunito-semibold">
-                    ..And you have to check it out!
-                </span>
-                <span style="font-size: 45px; line-height: 55px;">
-                    Introducing LiveScratch: Realtime Collaborations On Scratch!
-                </span>
-                <a style="border: 1px solid #ffffff1c;" target="_blank" href="https://chromewebstore.google.com/detail/pfaldlkkohfdnmlcladmhlihpbhlkolm" id="download">
-                    <img src="/assets/download.svg" style="height: 40px;" alt="Download LiveScratch Now!"/>
-                </a>
-            </div>
-            <div id="section-top-right" style="z-index: 10;">
-                <div class="video-container">
-                    <video height="350px" style="border-radius: 10px;" src="/assets/ad.mp4" controls></video>
-                </div>
-            </div>
+            <span style="font-size: 55px; line-height: 55px;" class="nunito-bold">
+                Get Started With LiveScratch
+            </span>
+            <span style="font-size: 40px; line-height: 50px;" class="nunito-semibold">
+                Step-By-Step Guide
+            </span>
+            <span style="font-size: 35px; line-height: 45px;">
+                This guide will cover everything from the ABC's!
+            </span>
         </section>
-        <section id="section-2">
-            <img src="/assets/elements/circle.svg" style="filter: blur(1.5px); height: 160px; position: absolute; left: -50px; top: 60px;"/>
-            <img src="/assets/elements/grid.svg" style="filter: blur(1.5px); height: 130px; position: absolute; left: 10%; bottom: 20%;"/>
-            <div id="section-2-left" style="z-index: 10;">
-                <span class="large">Simple</span>
-                <span class="large">Fast</span>
-                <span class="large">Secure</span>
-                <span class="large">Reliable</span>
-                <span>And Comes with a ton of features!</span>
-            </div>
-            <div id="section-2-right" style="z-index: 10;">
-                <img src="/assets/PopupScreenshot.png" style="height: 620px; filter: drop-shadow(0px 4px 24px #00000037); margin-left: 50px;"/>
-            </div>
-        </section>
-        <section id="section-3">
+        <section id="download-now">
             <img src="/assets/elements/star-green.svg" alt="" style="filter: blur(1.5px); height: 55px; position: absolute; top: 35%; right: 65%;"/>
             <img src="/assets/elements/flyingPlane2.svg" alt="" style="filter: blur(1.5px); height: 100px; position: absolute; right: 10%;"/>
-            <span style="font-size: 45px; z-index: 20;">Ready to unleash your Creativity?</span>
+            <span style="font-size: 45px; z-index: 20;">Haven't got LiveScratch yet?</span>
             <a style="border: 1px solid #ffffff1c; z-index: 20;" target="_blank" href="https://chromewebstore.google.com/detail/pfaldlkkohfdnmlcladmhlihpbhlkolm" id="download">
                 <img src="/assets/download.svg" style="height: 40px;" alt="Download LiveScratch Now!"/>
             </a>
         </section>
+        This is WIP fr fr
         <footer>
             <div style="display: flex; flex-direction: row; align-items: center; gap: 5px;">
                 <img id="logo" src="/assets/logo.png"/>
@@ -86,19 +67,19 @@
                 <span style="opacity: 0.8;">Currently <span id="version-text"></span><span>
             </div>
             <div id="quick-links">
-                <a href="https://github.com/Waakul/LiveScratch" class="quick-link">
+                <a target="_blank" href="https://github.com/Waakul/LiveScratch" class="quick-link">
                     <img src="https://pngimg.com/uploads/github/github_PNG40.png"/>
                     Github (Extension)
                 </a>
-                <a href="https://github.com/Waakul/LiveScratch-site" class="quick-link">
+                <a target="_blank" href="https://github.com/Waakul/LiveScratch-site" class="quick-link">
                     <img src="https://pngimg.com/uploads/github/github_PNG40.png"/>
                     Github (Website)
                 </a>
-                <a href="https://scratch.mit.edu/users/waakul" class="quick-link">
+                <a target="_blank" href="https://scratch.mit.edu/users/waakul" class="quick-link">
                     <img src="https://uploads.scratch.mit.edu/get_image/user/128606483_90x90.png?v="/>
                     Waakul (Scratch)
                 </a>
-                <a href="https://discord.gg/ahCACafPHX" class="quick-link">
+                <a target="_blank" href="https://discord.gg/ahCACafPHX" class="quick-link">
                     <img src="https://logodownload.org/wp-content/uploads/2017/11/discord-logo-1-1.png"/>
                     Discord (Server)
                 </a>

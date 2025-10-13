@@ -31,14 +31,8 @@ header #version {
     opacity: 0.7;;
 }
 
-header #version #version-text {
-    color: white;
-    text-decoration: none;
-}
-
 section#section-top {
     background: #4C97FF;
-    min-height: calc(100vh - 170px);
     width: auto;
     border-bottom-right-radius: 70px;
     padding: 40px 140px;
@@ -46,6 +40,12 @@ section#section-top {
     display: flex;           /* Make it a flex container */
     align-items: center;     /* Center vertically */
     position: relative;
+    flex-direction: column;
+    text-align: center;
+}
+
+section#section-top span {
+    z-index: 10;
 }
 
 section#section-2 {
@@ -58,17 +58,18 @@ section#section-2 {
     position: relative;
 }
 
-section#section-3 {
+section#download-now {
     width: auto;
-    padding: 40px 190px;
-    border-top-left-radius: 35px;
-    border-top-right-radius: 35px;
+    margin: 50px 100px;
+    padding: 23px 130px;
+    border-radius: 25px;
     color: #232323;
     display: flex;
     position: relative;
     flex-direction: column;
     gap: 10px;
-    background: linear-gradient(180deg, #F6FFF6 0%, rgba(246, 255, 246, 0.00) 100%);
+    background: linear-gradient(126deg, #FEF5DB 0.81%, #FFDFDF 100%);
+    box-shadow: 0px 8px 0px 0px #FFBFBB;
 }
 
 section#section-top div {
@@ -101,16 +102,29 @@ header {
     color: #ffffff;
     font-size: 25px;
     position: fixed;
+    top: 0;
     width: calc(100% - 50px);
-    z-index: 20;
+    z-index: 100;
 }
 
 header *  {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 10px;
     align-self: stretch;
+}
+
+header #header-left, header #header-left * {
+    gap: 10px;
+}
+
+header #header-right ul {
+    gap: 20px;
+}
+
+header #header-right ul a {
+    text-decoration: none;
+    color: #ffffff;
 }
 
 header #logo {
@@ -129,8 +143,8 @@ header #header-right {
     align-self: center;
 }
 
-#coming-soon {
-    opacity: 0.5;
+#coming-soon, header #header-right ul #coming-soon {
+    color: #ffffff82;
 }
 
 .tooltip {
@@ -188,7 +202,7 @@ header #header-right {
     margin-top: -5px;
 }
 
-@media only screen and (max-width: 434px) {
+@media only screen and (max-width: 500px) {
     header #header-right {
         display: none;
     }
@@ -226,7 +240,7 @@ header #header-right {
     }
 }
 @media only screen and (max-width: 635px) {
-    section#section-3 {
+    section#download-now {
         padding-inline: 40px;
     }
 }
@@ -280,7 +294,6 @@ footer {
     border-top-right-radius: 20px;
     padding: 20px;
     gap: 15px;
-    bottom: 0;
     position: relative;
 }
 
